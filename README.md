@@ -6,8 +6,6 @@ The ROS package provides essential audio capabilities, it is the entry point for
 
 It supports both step-by-step and one-touch playback, allowing playback from built-in sounds. Additionally, it offers recording functionality, with the option to save to a local file or a topic.
 
-Playback and record capabilities depend on [qrb_ros_audio_common](https://github.com/QUIC-QRB-ROS/qrb_ros_audio_common).
-
 ## Documentation
 
 Please refer to the [QRB ROS Audio Service](https://quic-qrb-ros.github.io/main/packages/qrb_ros_audio_service/index.html) for more documents.
