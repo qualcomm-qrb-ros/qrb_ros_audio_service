@@ -1,0 +1,23 @@
+qrb-audio-common-lib (1.0.3) noble; urgency=medium
+
+  * Fix build failure caused by missing dependencies.
+
+ -- Ronghui Zhu <ronghuiz@qti.qualcomm.com>  Fri, 21 Nov 2025 17:36:24 -0000
+
+qrb-audio-common-lib (1.0.2) noble; urgency=medium
+
+  * Fix 7.1 channel playback failure.
+
+ -- Ronghui Zhu <ronghuiz@qti.qualcomm.com>  Thu, 23 Oct 2025 18:30:30 -0000
+
+qrb-audio-common-lib (1.0.1) noble; urgency=medium
+
+  * Fix repeat not work.
+
+ -- Ronghui Zhu <ronghuiz@qti.qualcomm.com>  Wed, 22 Oct 2025 17:30:04 -0000
+
+qrb-audio-common-lib (1.0.0) noble; urgency=medium
+
+  * First release for Debian package.
+
+ -- Ronghui Zhu <ronghuiz@qti.qualcomm.com>  Tue, 29 Jul 2025 13:02:04 -0000
