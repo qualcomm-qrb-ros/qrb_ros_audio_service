@@ -1,12 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
-project(qrb_audio_common_lib VERSION 1.0.0)
+project(qrb_audio_common_lib VERSION 1.0.3)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic -std=c++17)
 endif()
-
-find_package(ament_cmake_auto REQUIRED)
-ament_auto_find_build_dependencies()
 
 # add targets
 add_library(${PROJECT_NAME} SHARED
@@ -37,9 +34,8 @@ install(FILES ${HEADER_FILES}
 install(TARGETS ${PROJECT_NAME}
   EXPORT ${PROJECT_NAME}Config
   RUNTIME DESTINATION bin
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 install(EXPORT ${PROJECT_NAME}Config DESTINATION share/${PROJECT_NAME}/cmake)
-ament_auto_package()

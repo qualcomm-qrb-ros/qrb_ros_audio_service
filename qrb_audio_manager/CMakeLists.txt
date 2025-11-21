@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(qrb_audio_manager VERSION 1.0.0)
+project(qrb_audio_manager VERSION 1.0.3)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 17)
@@ -8,9 +8,6 @@ endif()
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
-
-find_package(ament_cmake_auto REQUIRED)
-ament_auto_find_build_dependencies()
 
 set(SOURCES
   src/audio_manager.cpp
@@ -35,12 +32,10 @@ install(DIRECTORY include/${PROJECT_NAME}
 
 install(TARGETS ${PROJECT_NAME}
   EXPORT ${PROJECT_NAME}Config
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 install(EXPORT ${PROJECT_NAME}Config
   DESTINATION share/${PROJECT_NAME}/cmake
 )
-
-ament_auto_package()

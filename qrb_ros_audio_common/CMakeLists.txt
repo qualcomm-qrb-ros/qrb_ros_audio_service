@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-
-project(qrb_ros_audio_common)
+project(qrb_ros_audio_common VERSION 1.0.3)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
