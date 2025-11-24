@@ -254,12 +254,15 @@ sudo apt install build-essential cmake pkg-config
 
 # Install ROS2 Jazzy (if not already installed)
 # Follow instructions at https://docs.ros.org/en/jazzy/Installation.html
-sudo apt install ros-jazzy-rclcpp ros-jazzy-rclcpp-components ros-jazzy-ament-cmake-auto ros-jazzy-std-msgs libpulse-dev libsndfile1-dev
+sudo apt install ros-jazzy-rclcpp ros-jazzy-rclcpp-components ros-jazzy-ament-cmake-auto ros-jazzy-std-msgs ros-jazzy-qrb-ros-audio-common-msgs ros-jazzy-qrb-ros-audio-service-msgs libpulse-dev libsndfile1-dev
 ```
 
 ### Step 2: Clone and Build
 
 ```bash
+# setup ros2 env
+source /opt/ros/jazzy/setup.sh
+
 # Navigate to your ROS2 workspace
 cd ~/ros2_ws/src
 
