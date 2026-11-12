@@ -53,30 +53,30 @@ enum class StreamCommand
 
 struct StreamConfigs
 {
-  uint32_t stream_handle{ 0 };
+  uint32_t stream_handle{0};
   StreamType type;
   uint8_t channels;
   uint32_t sample_rate;
   uint8_t sample_format;
   std::string coding_format;
   uint32_t bitrate;
-  StreamState state{ StreamState::INVALID_STATE };
+  StreamState state{StreamState::INVALID_STATE};
   std::string source;
   std::string play_mode;
-  int8_t repeat{ 0 };
-  uint8_t volume{ 50 };
-  bool mute{ false };
-  bool pub_pcm{ false };
+  int8_t repeat{0};
+  uint8_t volume{50};
+  bool mute{false};
+  bool pub_pcm{false};
   std::string pub_name;
   std::string subs_name;
 };
 
 struct DomainConfigs
 {
-  int domain_id{ DOMAIN_ID_INVALID };
-  bool use_async{ false };
-  std::function<bool(const void * const, StreamCommand, uint32_t &)> cb{ nullptr };
-  uint32_t handle{ 0 };
+  int domain_id{DOMAIN_ID_INVALID};
+  bool use_async{false};
+  std::function<bool(const void * const, StreamCommand, uint32_t &)> cb{nullptr};
+  uint32_t handle{0};
 };
 
 extern std::map<StreamType, std::string> audio_stream_type_name;
@@ -99,7 +99,7 @@ public:
       bool use_async);
 
 protected:
-  Stream(){};
+  Stream() {};
   Stream(uint32_t stream_handle,
       uint32_t sample_rate,
       uint8_t channels,
@@ -110,7 +110,7 @@ protected:
       uint8_t domain_id);
 
 private:
-  uint32_t domain_handle_[DOMAIN_ID_MAX]{ 0 };
+  uint32_t domain_handle_[DOMAIN_ID_MAX]{0};
   static DomainConfigs domain_configs_[DOMAIN_ID_MAX];
 };
 

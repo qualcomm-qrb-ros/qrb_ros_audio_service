@@ -34,25 +34,25 @@ pa_context_state_t PulseCommonStream::pulse_context_state_ = PA_CONTEXT_UNCONNEC
 std::set<PulseCommonStream *> PulseCommonStream::timestamp_streams_;
 
 static const std::multimap<pa_sample_format_t, int> playback_format_map{
-  { PA_SAMPLE_S16NE, SF_FORMAT_PCM_S8 },
-  { PA_SAMPLE_S16NE, SF_FORMAT_PCM_U8 },
-  { PA_SAMPLE_S16NE, SF_FORMAT_PCM_16 },
-  { PA_SAMPLE_S24NE, SF_FORMAT_PCM_24 },
-  { PA_SAMPLE_S32NE, SF_FORMAT_PCM_32 },
-  { PA_SAMPLE_ULAW, SF_FORMAT_ULAW },
-  { PA_SAMPLE_ALAW, SF_FORMAT_ALAW },
-  { PA_SAMPLE_FLOAT32NE, SF_FORMAT_FLOAT },
-  { PA_SAMPLE_FLOAT32NE, SF_FORMAT_DOUBLE },
+    {PA_SAMPLE_S16NE, SF_FORMAT_PCM_S8},
+    {PA_SAMPLE_S16NE, SF_FORMAT_PCM_U8},
+    {PA_SAMPLE_S16NE, SF_FORMAT_PCM_16},
+    {PA_SAMPLE_S24NE, SF_FORMAT_PCM_24},
+    {PA_SAMPLE_S32NE, SF_FORMAT_PCM_32},
+    {PA_SAMPLE_ULAW, SF_FORMAT_ULAW},
+    {PA_SAMPLE_ALAW, SF_FORMAT_ALAW},
+    {PA_SAMPLE_FLOAT32NE, SF_FORMAT_FLOAT},
+    {PA_SAMPLE_FLOAT32NE, SF_FORMAT_DOUBLE},
 };
 
 static const std::multimap<pa_sample_format_t, int> capture_format_map{
-  { PA_SAMPLE_U8, SF_FORMAT_PCM_U8 },
-  { PA_SAMPLE_S16NE, SF_FORMAT_PCM_16 },
-  { PA_SAMPLE_S24NE, SF_FORMAT_PCM_24 },
-  { PA_SAMPLE_S32NE, SF_FORMAT_PCM_32 },
-  { PA_SAMPLE_ULAW, SF_FORMAT_ULAW },
-  { PA_SAMPLE_ALAW, SF_FORMAT_ALAW },
-  { PA_SAMPLE_FLOAT32NE, SF_FORMAT_FLOAT },
+    {PA_SAMPLE_U8, SF_FORMAT_PCM_U8},
+    {PA_SAMPLE_S16NE, SF_FORMAT_PCM_16},
+    {PA_SAMPLE_S24NE, SF_FORMAT_PCM_24},
+    {PA_SAMPLE_S32NE, SF_FORMAT_PCM_32},
+    {PA_SAMPLE_ULAW, SF_FORMAT_ULAW},
+    {PA_SAMPLE_ALAW, SF_FORMAT_ALAW},
+    {PA_SAMPLE_FLOAT32NE, SF_FORMAT_FLOAT},
 };
 
 void PulseCommonStream::pulse_stream_update_timing_callback(pa_stream * stream,
@@ -73,7 +73,7 @@ void PulseCommonStream::pulse_stream_update_timing_callback(pa_stream * stream,
   }
 
   StreamEventData stream_event_data = {
-    .usec = usec - current_stream->start_usec,
+      .usec = usec - current_stream->start_usec,
   };
 
   current_stream->event_cb(StreamEvent::StreamTimestamp, stream_event_data, (void *)stream_handle);
