@@ -43,3 +43,8 @@
 - Eliminate dangling pointer risk and improve capture latency measurement.
 - Unify ALSA and PulseAudio backend capture period duration and increase it from 20ms to 80ms to reduce CPU overhead.
 - Contributors👉 Ronghui Zhu
+
+## 2.0.2 (2026-11-12)
+
+- Add awe device into ALSA device list.
+- Contributors👉 Ronghui Zhu

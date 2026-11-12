@@ -22,15 +22,19 @@ namespace audio_common_lib
 {
 
 #define ALSA_DEFAULT_DEVICE "default"
+#define ALSA_AWE_PLAYBACK_DEVICE "awe:0,0"
+#define ALSA_AWE_CAPTURE_DEVICE "awe:0,100"
 #define ALSA_PERIOD_DURATION_MS 80
 #define ALSA_BUFFER_PERIOD_COUNT 8
 
 // Device names to try, ordered by priority (first entry tried first).
 inline const std::vector<const char *> kAlsaPlaybackProbeDevices = {
+  ALSA_AWE_PLAYBACK_DEVICE,
   ALSA_DEFAULT_DEVICE,
 };
 
 inline const std::vector<const char *> kAlsaCaptureProbeDevices = {
+  ALSA_AWE_CAPTURE_DEVICE,
   ALSA_DEFAULT_DEVICE,
 };
 
