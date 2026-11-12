@@ -48,3 +48,8 @@
 
 - Add awe device into ALSA device list.
 - Contributors👉 Ronghui Zhu
+
+## 2.0.3 (2026-11-12)
+
+- Fix clang-format brace initialization spacing.
+- Contributors👉 Ronghui Zhu

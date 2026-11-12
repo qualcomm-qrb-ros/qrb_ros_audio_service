@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(qrb_ros_audio_service VERSION 2.0.2)
+project(qrb_ros_audio_service VERSION 2.0.3)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 17)

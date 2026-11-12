@@ -20,7 +20,7 @@ namespace qrb
 namespace audio_common_lib
 {
 
-#define DEFAULT_VALUE (uint32_t) - 1
+#define DEFAULT_VALUE (uint32_t)-1
 #define TIME_EVENT_USEC 50000
 #define STREAM_VOL_MAX 100
 #define STREAM_VOL_MIN 0

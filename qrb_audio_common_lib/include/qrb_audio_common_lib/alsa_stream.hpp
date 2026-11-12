@@ -29,13 +29,13 @@ namespace audio_common_lib
 
 // Device names to try, ordered by priority (first entry tried first).
 inline const std::vector<const char *> kAlsaPlaybackProbeDevices = {
-  ALSA_AWE_PLAYBACK_DEVICE,
-  ALSA_DEFAULT_DEVICE,
+    ALSA_AWE_PLAYBACK_DEVICE,
+    ALSA_DEFAULT_DEVICE,
 };
 
 inline const std::vector<const char *> kAlsaCaptureProbeDevices = {
-  ALSA_AWE_CAPTURE_DEVICE,
-  ALSA_DEFAULT_DEVICE,
+    ALSA_AWE_CAPTURE_DEVICE,
+    ALSA_DEFAULT_DEVICE,
 };
 
 class AlsaCommonStream : public IAudioStream
@@ -60,7 +60,7 @@ protected:
 
   AudioStreamInfo stream_info_;
   snd_pcm_t * pcm_handle_ = nullptr;
-  std::atomic<bool> running_{ false };
+  std::atomic<bool> running_{false};
   std::thread worker_thread_;
   bool muted_ = false;
   uint8_t volume_ = 100;
