@@ -41,8 +41,8 @@ public:
   explicit AudioServer(const rclcpp::NodeOptions & options);
 
 private:
-  rclcpp::CallbackGroup::SharedPtr callback_group_{ nullptr };
-  rclcpp::Service<AudioService>::SharedPtr server_{ nullptr };
+  rclcpp::CallbackGroup::SharedPtr callback_group_{nullptr};
+  rclcpp::Service<AudioService>::SharedPtr server_{nullptr};
 
   std::unordered_map<uint32_t, rclcpp::Publisher<AudioData>::SharedPtr> capture_pubs_;
   std::unordered_map<uint32_t, rclcpp::Subscription<AudioData>::SharedPtr> playback_subs_;
@@ -51,7 +51,7 @@ private:
   std::unordered_map<uint32_t, LatencyStats> playback_latency_stats_;
   std::mutex latency_stats_mutex_;
   rclcpp::TimerBase::SharedPtr latency_log_timer_;
-  std::atomic<bool> latency_log_enabled_{ false };
+  std::atomic<bool> latency_log_enabled_{false};
   rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr param_callback_handle_;
 
   void service_callback(const std::shared_ptr<rmw_request_id_t> request_header,
